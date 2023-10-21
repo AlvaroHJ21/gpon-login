@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPON Login</title>
+    <meta name="description" content="Página de login de GPON." />
     <link rel="stylesheet" href="/assets/css/normalize.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <!-- Google Fonts -->
@@ -18,11 +19,12 @@
     <header class="header">
       <div class="container">
         <a href="/">
-          <img src="/assets/img/logo-white.svg" alt="" width="200" />
+          <img src="/assets/img/logo-white.svg" alt="logo" width="200" />
         </a>
       </div>
     </header>
-    <main class="background-image">
+    <main class="">
+      <div class="background-image-waves"></div>
       <div class="container main-content">
         <div class="card">
           <h1 class="card__heading">Ingresa tus datos para iniciar sesión</h1>
@@ -44,7 +46,12 @@
                 placeholder="Clave"
                 class="login__input"
               />
-              <button type="button" id="password-toggle" class="pass-view"></button>
+              <button
+                type="button"
+                id="password-toggle"
+                class="pass-view"
+                aria-label="show pass"
+              ></button>
             </div>
             <div class="login__form-div">
               <label for="remember" class="login__checkbox">
@@ -58,7 +65,6 @@
         </div>
       </div>
     </main>
-    <div class="background-image-waves"></div>
     <footer class="footer">
       <div class="container">
         <p>@2023 Gpon Networks. Todos los derechos reservados.</p>
