@@ -1,0 +1,233 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: #ff6928;
+  --secondary: #384980;
+  --a: #ff384980;
+  --a: #ff6928;
+  --a: #e97923;
+  --a: #384980;
+  --a: #ffffff;
+  /* 
+Paleta de colores
+#ff384980
+#FF6928
+#e97923
+#384980
+#ffffff
+
+Tipografía 
+- Poppins
+- Metropolis
+- LEMON MILK 
+*/
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+
+  height: 100vh;
+  background-color: var(--primary);
+}
+
+button {
+  all: unset;
+  text-align: center;
+}
+
+/** UTILITIES **/
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  /* transform: scale(1.05); */
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+/** HEADER **/
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/** MAIN **/
+
+.background-image {
+  position: relative;
+  background-image: url(/assets/img/family.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-image-waves {
+  position: absolute;
+  background-image: url(/assets/img/ondas-patron-min.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  bottom: 0;
+  z-index: 10;
+  opacity: 0.4;
+  width: 100%;
+  height: 200px;
+}
+
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000003b;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    align-items: end;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+.card__heading {
+  color: var(--secondary);
+  margin: 0 0 2rem 0;
+  font-size: 3rem;
+  font-weight: 300;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.login__form-div {
+  position: relative;
+  width: 100%;
+}
+
+.login__input {
+  border: 1px solid #a5bfdb;
+  background-color: #efefef;
+  padding: 1rem;
+  outline: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  color: var(--secondary);
+}
+
+.login__input:focus {
+  border: 1px solid var(--secondary);
+}
+
+.login__input::placeholder {
+  color: #a5bfdb;
+}
+
+.pass-view {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  color: var(--secondary);
+}
+
+.login__checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1rem;
+  color: var(--secondary);
+}
+
+.login__checkbox input:checked {
+  background-color: var(--secondary);
+}
+
+.login__link {
+  color: var(--secondary);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/** FOOTER **/
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 1.6rem;
+}

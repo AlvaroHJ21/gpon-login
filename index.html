@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPON Login</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/">
+          <img src="/assets/img/logo-white.svg" alt="" width="200" />
+        </a>
+      </div>
+    </header>
+    <main class="background-image">
+      <div class="container main-content">
+        <div class="card">
+          <h1 class="card__heading">Ingresa tus datos para iniciar sesión</h1>
+          <form action="/" class="login__form" method="POST">
+            <div class="login__form-div">
+              <input
+                type="text"
+                name="suscriber_id"
+                id="suscriber_id"
+                placeholder="Digita tu Nro de Documento"
+                class="login__input"
+              />
+            </div>
+            <div class="login__form-div">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Clave"
+                class="login__input"
+              />
+              <button type="button" id="password-toggle" class="pass-view"></button>
+            </div>
+            <div class="login__form-div">
+              <label for="remember" class="login__checkbox">
+                <input id="remember" type="checkbox" />
+                Recordarme
+              </label>
+            </div>
+            <button class="btn btn-primary">Ingresar</button>
+            <a href="/" class="login__link">¿Aún no estás registrado?</a>
+          </form>
+        </div>
+      </div>
+    </main>
+    <div class="background-image-waves"></div>
+    <footer class="footer">
+      <div class="container">
+        <p>@2023 Gpon Networks. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
