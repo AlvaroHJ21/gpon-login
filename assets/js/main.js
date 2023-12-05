@@ -12,12 +12,17 @@ const svgEyeClose = `
 
 toggleButton = document.getElementById('password-toggle');
 toggleButton2 = document.getElementById('repeat-password-toggle');
+toggleButtonCurrentPass = document.getElementById('current-password-toggle');
 
 toggleButton.addEventListener('click', () => togglePasswordVisibility('password'));
 toggleButton2?.addEventListener('click', () => togglePasswordVisibility('repeat-password'));
+toggleButtonCurrentPass?.addEventListener('click', () =>
+  togglePasswordVisibility('current-password')
+);
 
 toggleButton.innerHTML = svgEyeOpen;
 if (toggleButton2) toggleButton2.innerHTML = svgEyeOpen;
+if (toggleButtonCurrentPass) toggleButtonCurrentPass.innerHTML = svgEyeOpen;
 
 function togglePasswordVisibility(id) {
   const passwordField = document.getElementById(id);
