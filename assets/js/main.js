@@ -11,16 +11,23 @@ const svgEyeClose = `
 `;
 
 toggleButton = document.getElementById('password-toggle');
-toggleButton.addEventListener('click', togglePasswordVisibility);
+toggleButton2 = document.getElementById('repeat-password-toggle');
+
+toggleButton.addEventListener('click', () => togglePasswordVisibility('password'));
+toggleButton2?.addEventListener('click', () => togglePasswordVisibility('repeat-password'));
+
 toggleButton.innerHTML = svgEyeOpen;
-function togglePasswordVisibility() {
-  const passwordField = document.getElementById('password');
+if (toggleButton2) toggleButton2.innerHTML = svgEyeOpen;
+
+function togglePasswordVisibility(id) {
+  const passwordField = document.getElementById(id);
+  const button = document.getElementById(id + '-toggle');
 
   if (passwordField.type === 'password') {
     passwordField.type = 'text';
-    toggleButton.innerHTML = svgEyeClose;
+    if (button) button.innerHTML = svgEyeClose;
   } else {
     passwordField.type = 'password';
-    toggleButton.innerHTML = svgEyeOpen;
+    if (button) button.innerHTML = svgEyeOpen;
   }
 }
