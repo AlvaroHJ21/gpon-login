@@ -39,9 +39,11 @@ body {
   background-color: var(--primary);
 }
 
-button {
+button,
+a {
   all: unset;
   text-align: center;
+  cursor: pointer;
 }
 
 /** UTILITIES **/
