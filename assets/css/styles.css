@@ -76,6 +76,10 @@ button {
   box-shadow: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /** HEADER **/
 
 .header {
@@ -158,6 +162,11 @@ button {
   text-align: center;
 }
 
+.card__description {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
 .login__form {
   display: flex;
   flex-direction: column;
@@ -221,6 +230,11 @@ button {
   font-weight: 600;
 }
 
+.forgot-pass-link {
+  margin: auto;
+  margin-right: 0;
+}
+
 /** FOOTER **/
 
 .footer {
@@ -230,4 +244,14 @@ button {
   width: 100%;
   color: #fff;
   font-size: 1.6rem;
+}
+
+/** RECOVER **/
+
+.recover-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
