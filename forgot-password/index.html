@@ -19,26 +19,26 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="/">
+        <a href="/login">
           <img src="/assets/img/logo-white.svg" alt="logo" width="200" />
         </a>
       </div>
     </header>
-    <main class="">
+    <main class="main">
       <div class="background-image-waves"></div>
       <div class="container recover-content">
         <div class="card">
-          <h1 class="card__heading">Código de validación</h1>
+          <h1 class="card__heading">¿Olvidaste tu contraseña?</h1>
           <p class="card__description">
-            Ingresa el código de validación que te enviamos a tu correo.
+            Ingresa tu email asociado a tu cuenta y te enviaremos un código de validación.
           </p>
           <form action="/" class="login__form" method="POST">
             <div class="login__form-div">
               <input
-                type="text"
-                name="validation_code"
-                id="validation_code"
-                placeholder="Código de validación"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Digita tu email"
                 class="login__input"
               />
             </div>

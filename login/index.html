@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GPON Cambiar Contraseña</title>
+    <title>GPON Login</title>
     <meta name="description" content="Página de login de GPON." />
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="/assets/css/normalize.css" />
@@ -19,41 +19,36 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="/">
+        <a href="/login">
           <img src="/assets/img/logo-white.svg" alt="logo" width="200" />
         </a>
       </div>
     </header>
     <main class="">
       <div class="background-image-waves"></div>
-      <div class="container recover-content">
+      <div class="container main-content">
         <div class="card">
-          <h1 class="card__heading">Cambiar contraseña</h1>
-          <p class="card__description">
-            Ingresa tu contraseña actual y la nueva contraseña que deseas usar.
-          </p>
+          <h1 class="card__heading">Ingresa tus datos para iniciar sesión</h1>
+
+          <!-- Usar clase hidden para ocultar -->
+          <div class="alert alert-error hidden">Usuario y/o clave incorrectas. Por favor reintente nuevamente.</div>
+
           <form action="/" class="login__form" method="POST">
             <div class="login__form-div">
               <input
-                type="password"
-                name="current-password"
-                id="current-password"
-                placeholder="Contraseña actual"
+                type="text"
+                name="suscriber_id"
+                id="suscriber_id"
+                placeholder="Digita tu Nro de Documento"
                 class="login__input"
               />
-              <button
-                type="button"
-                id="current-password-toggle"
-                class="pass-view"
-                aria-label="show pass"
-              ></button>
             </div>
             <div class="login__form-div">
               <input
                 type="password"
                 name="password"
                 id="password"
-                placeholder="Nueva contraseña"
+                placeholder="Clave"
                 class="login__input"
               />
               <button
@@ -63,22 +58,17 @@
                 aria-label="show pass"
               ></button>
             </div>
+            <a href="/forgot-password" class="login__link forgot-pass-link"
+              >¿Olvidaste tu contraseña?</a
+            >
             <div class="login__form-div">
-              <input
-                type="password"
-                name="repeat-password"
-                id="repeat-password"
-                placeholder="Repetir contraseña"
-                class="login__input"
-              />
-              <button
-                type="button"
-                id="repeat-password-toggle"
-                class="pass-view"
-                aria-label="show pass"
-              ></button>
+              <label for="remember" class="login__checkbox">
+                <input id="remember" type="checkbox" />
+                Recordarme
+              </label>
             </div>
-            <button class="btn btn-primary">Enviar</button>
+            <button class="btn btn-primary">Ingresar</button>
+            <a href="https://gpon.pe/" class="login__link">¿Aún no estás registrado?</a>
           </form>
         </div>
       </div>
