@@ -82,6 +82,12 @@ a {
   box-shadow: none;
 }
 
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
 .text-center {
   text-align: center;
 }
@@ -110,6 +116,10 @@ a {
   display: none;
 }
 
+.relative {
+  position: relative;
+}
+
 /** HEADER **/
 
 .header {
@@ -121,7 +131,7 @@ a {
 
 /** MAIN **/
 
-.main{
+.main {
   height: 100%;
 }
 
@@ -302,6 +312,63 @@ a {
   color: #fff;
   height: 100vh;
   width: 28rem;
+  display: none;
+}
+
+
+.menu__wrapper {
+  text-align: end;
+}
+
+
+@media screen and (min-width: 768px) {
+  .menu__wrapper {
+    display: none;
+  }
+}
+
+.menu__btn {
+  margin-bottom: 1rem;
+  padding: 1rem 1.8rem;
+}
+
+.menu__items {
+  position: absolute;
+  z-index: 2000;
+  background-color: #39484f;
+  color: #fff;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+.btn-menu {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-menu {
+    display: hidden;
+  }
+}
+
+.responsive-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  background-color: #39484f;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-menu {
+    display: none;
+  }
 }
 
 .sidebar__header {
@@ -369,7 +436,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
 
 .swiper {
   width: 100%;

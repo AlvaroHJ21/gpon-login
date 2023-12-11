@@ -59,6 +59,35 @@
       </aside>
 
       <section class="dashboard__content">
+        
+        <div class="relative menu__wrapper">
+          <button id="btn-menu" class="btn btn-outline menu__btn">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div id="responsive-menu" class="menu__items hidden">
+            <ul class="sidebar__items">
+              <li>
+                <a href="/dashboard" class="active">
+                  <i class="fa fa-home"></i>
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a href="/dashboard/change-password.html">
+                  <i class="fa fa-key"></i>
+                  Cambiar contraseña
+                </a>
+              </li>
+              <li>
+                <a href="/login">
+                  <i class="fa fa-sign-out-alt"></i>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div class="cards">
           <div class="card card-greeting">
             <p class="card__heading">Hola, MARLON GABRIEL MUNAYA LURITA</p>
@@ -73,10 +102,24 @@
         <!-- Carrusel -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="https://gpon.pe/wp-content/uploads/2023/11/PORTADA-CON-TV-GPON.webp" alt=""></div>
-            <div class="swiper-slide"><img src="https://gpon.pe/wp-content/uploads/2023/09/PANEL-PRINCIPAL-2.webp" alt=""></div>
-            <div class="swiper-slide"><img src="https://gpon.pe/wp-content/uploads/2023/11/PORTADA-CON-TV-GPON.webp" alt=""></div>
-            <div class="swiper-slide"><img src="https://gpon.pe/wp-content/uploads/2023/09/PANEL-PRINCIPAL-2.webp" alt=""></div>
+            <div class="swiper-slide">
+              <img
+                src="https://gpon.pe/wp-content/uploads/2023/11/PORTADA-CON-TV-GPON.webp"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://gpon.pe/wp-content/uploads/2023/09/PANEL-PRINCIPAL-2.webp" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://gpon.pe/wp-content/uploads/2023/11/PORTADA-CON-TV-GPON.webp"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img src="https://gpon.pe/wp-content/uploads/2023/09/PANEL-PRINCIPAL-2.webp" alt="" />
+            </div>
           </div>
           <!-- <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div> -->
@@ -107,5 +150,7 @@
         },
       });
     </script>
+
+    <script src="/assets/js/sidebar.js"></script>
   </body>
 </html>
